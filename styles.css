@@ -1,0 +1,156 @@
+/* #region Variables */
+:root{
+    --blue: #0FC2C0;
+    --ocean: #0CABA8;
+    --aqua: #008F8C;
+    --teal: #015958;
+    --dark: #023535;
+    --gray: #8d9191c9;
+}
+/* #endregion */
+/* #region Header */
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    height: 30vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    margin-top: 0;   
+
+    background-image: url(Images/header\ image\ for\ news\ website\ green\ hills_.png);
+    background-position: center;
+    background-attachment: scroll;
+}
+
+header>h1{
+    margin: 0;
+    text-align: center;
+    padding-top: 10vh;
+    font-size: 5vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* #endregion */
+/* #region Navigation */
+nav>ul{
+    display: flex;
+}
+nav>hr{
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: var(--dark);
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+nav>ul>li{
+    list-style: none;
+}
+/* #endregion */
+/* #region Main */
+main{
+    display: flex;
+}
+main>img{
+    margin: 1vw; 
+
+    width: 15vw;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    
+    row-gap: 2vh;
+    column-gap: 3vw;
+
+    margin-right: 15vw;
+}
+.gallery>div {
+    margin: auto;
+
+}
+.special{
+  grid-column: 1 / span 2;
+  padding-left: 25vw;
+  padding-right: 25vw;
+ 
+}
+
+.gallery>div>a{
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.gallery>div>a>article{
+    display: flex;
+    background-color: var(--gray);
+    border: black solid;
+    font-size: 2vw;
+    text-align: center;
+
+    
+}
+.gallery>div>a>article>img{
+    width: 15em;
+   
+}
+
+/* #endregion */
+/* #region Footer */
+    footer{
+        margin-top: 5vh;
+        margin-bottom: 0;
+        padding: 0;
+        background-color: var(--teal);
+        height: 50vh;
+        width: 100vw;
+    }
+    footer>div{
+        padding: 1vh;
+        
+
+    }
+    footer>div>p{
+        text-align: center;
+        font-size: 2vw;
+    }
+/* #endregion */
+
+@media screen and (max-width:770px){
+
+    header>h1{
+        font-size: 10vw;
+    }
+    nav>ul>li>a{
+        font-size: 5vw;
+    }
+  
+    footer>div>p{
+        text-align: center;
+        padding: 1vh;
+        font-size: 5vw;
+    }
+    .gallery {
+        grid-template-columns: repeat(1, auto);
+        
+    }
+    
+    .gallery>div>a>article{
+        width: 70vw;
+        
+       
+    }
+    .gallery>div>a>article>figcaption{
+        font-size: 4vw;
+        padding: 1vw;
+    }
+}
